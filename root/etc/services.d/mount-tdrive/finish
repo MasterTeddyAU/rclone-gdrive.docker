@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+# Copyright (c) 2019, PhysK
+# All rights reserved.
+TDNAME=$(head -n 1 /config/rclone-docker.conf | sed 's/[][]//g')
+echo "Shutting Down $(TDNAME) Mount"
+
+fusermount -u /mnt/$(TDNAME)

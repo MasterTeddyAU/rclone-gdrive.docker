@@ -1,0 +1,7 @@
+/logs/*.rclone.log {
+    size 50M
+    rotate 2
+    noolddir
+	missingok
+	sharedscripts
+}
