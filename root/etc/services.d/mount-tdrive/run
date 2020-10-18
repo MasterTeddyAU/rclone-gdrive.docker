@@ -21,7 +21,7 @@ RC_ADDR=${RC_ADDR:-0.0.0.0:5572}
 RC_USER=${RC_USER:-user}
 RC_PASS=${RC_PASS:-xxx}
 POLL_INTERVAL=${POLL_INTERVAL:-5m}
-TDNAME=$(head -n 1 /config/rclone-docker.conf | sed 's/[][]//g')
+TDNAME=$(head -n 1 /config/rclone-docker.conf | sed 's/[][]//g' | tr -d '\r')
 TDID=$(cat /config/rclone-docker.conf | grep 'team_drive' | awk '{print $3}' | head -n 1)
 
 if [ "${RC_ENABLED}" == "true" ]; then
