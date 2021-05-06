@@ -58,7 +58,7 @@ mount ${TDNAME}: /mnt/${TDNAME} \
 --buffer-size ${BUFFER_SIZE} \
 --umask 002 \
 ${RC_CMD}
---log-level DEBUG \
+--log-level NOTICE \
 --config /config/rclone-docker.conf \
 --log-file /logs/${TDID}.rclone.log"
 
